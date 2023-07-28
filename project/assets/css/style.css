@@ -201,9 +201,15 @@ main .triple-cards a:hover{
     background-size: cover;
 }
 
-.single article{
+.single a {
+ display: block;
  background-color: var(--midblue);
  padding: 3rem 5rem;
+}
+
+.single article {
+    background-color: var(--midblue);
+    padding: 3rem 5rem;
 }
 
 footer {
