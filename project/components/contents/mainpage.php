@@ -39,7 +39,7 @@
             $result2 = $db->query($sql2);
             while ($row2 = $result2->fetch_assoc()) { ?>
                 <div style="background-image: url('<?php echo $row2['cont_img']; ?>');"></div>
-                <a href="index.php?id=<?php echo $row2['cont_id']; ?>">
+                <a href="index.php?type=<?php echo $row2['cont_type'];?>&id=<?php echo $row2['cont_id'];?>">
                     <h2>
                         <?php echo $row2['cont_title']; ?>
                     </h2>
@@ -63,7 +63,7 @@
             $result = $db->query($sql);
             while ($row = $result->fetch_assoc()) { ?>
                 <!-- <a href="index.php?url=<?php echo $row['cont_url']; ?>"> -->
-                <a href="index.php?id=<?php echo $row['cont_id']; ?>">
+                <a href="index.php?type=<?php echo $row['cont_type'];?>&id=<?php echo $row['cont_id'];?>">
                     <div class="card-image"
                         style="background-image: url('<?php echo $row['cont_img']; ?>');"></div>
                     <div class="card-text">
