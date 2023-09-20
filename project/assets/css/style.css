@@ -212,6 +212,27 @@ main .triple-cards a:hover{
     padding: 3rem 5rem;
 }
 
+
+.single-content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: var(--midblue);
+}
+
+.single-content a {
+ display: block;
+ background-color: var(--midblue);
+ padding: 3rem 5rem;
+}
+
+.single-content article {
+    background-color: var(--midblue);
+    padding: 3rem 12rem;
+}
+
+
 footer {
     grid-row: 4/5;
     background-color: var(--ultradarkblue);

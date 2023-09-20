@@ -7,16 +7,23 @@ include './components/header/header.php';           // Layout Header
 include './components/nav/nav.php';                 // Navigation
 include './components/main/main_start.php';         // Content container open
 
-if ($_GET['type']) {             // 1: content
-    if ($_GET['type']==1) {             // 1: content
-        if ($_GET['id'])    include './components/contents/content.php';        // Content sections...
+// Ha van komponens
+if ($_GET['component']) {
+
+    // Hír
+    if ($_GET['component']=='news') {
+        if ($_GET['id']) include './components/contents/news.php';
+        else include './components/error/error.php';
     }
-    else if ($_GET['type']==0) {     // 0: simple text
-        if ($_GET['id'])    include './components/contents/content.php';        // Content sections...
+
+    // Tartalom
+    if ($_GET['component']=='content') {
+        if ($_GET['id']) include './components/contents/content.php';
+        else include './components/error/error.php';
     }
-} else {
-    include './components/contents/mainpage.php';       // Content sections...
-}
+
+// Ha nincs komponens, akkor főoldal
+} else include './components/contents/mainpage.php';
 
 
 include './components/main/main_end.php';           // Content container close
