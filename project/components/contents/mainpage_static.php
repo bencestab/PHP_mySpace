@@ -1,4 +1,4 @@
-        <!-- <section class="triple-cards" id="static_content">
+        <<section class="triple-cards" id="static_content">
             <a>
                 <div class="card-image" style="background-image: url('./assets/img/1242666_140393-OT0SU2-162.jpg');">
                 </div>
@@ -26,9 +26,9 @@
                     vitae porro nam dolorum alias expedita cum?
                 </div>
             </a>
-        </section> -->
+        </section>
 
-               <!-- <section class="single">
+        <<section class="single">
             <div style="background-image: url('./assets/img/1250317_143233-OTMRKH-135.jpg');"></div>
             <article>
                 <h2>Lorem ipsum dolor sit</h2> amet consectetur adipisicing elit. Non, beatae eius. Incidunt, error
@@ -52,4 +52,4 @@
                 sequi similique aspernatur.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, beatae eius. Incidunt, error
                 nesciunt aliquid inventore minus laudantium doloribus saepe? At earum eum harum id illo repellendus
                 sequi similique aspernatur.</article>
-        </section> -->
+        </section>

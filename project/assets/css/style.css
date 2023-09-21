@@ -34,6 +34,15 @@ header{
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: var(--midblue);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/header_bg.jpg);
+}
+
+
+nav * {
+    user-select: none;
 }
 
 nav section {
@@ -212,33 +221,29 @@ main .triple-cards a:hover{
     padding: 3rem 5rem;
 }
 
-
-.single-content {
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    background-color: var(--midblue);
+.single .link {
+    display: inline-block;
+    background-color: none;
+    padding: 2rem 0rem .3rem 0;
+    border-bottom: 1px dotted rgba(255, 255, 255, .5);
+    font-size: .85rem;
 }
-
-.single-content a {
- display: block;
- background-color: var(--midblue);
- padding: 3rem 5rem;
-}
-
-.single-content article {
-    background-color: var(--midblue);
-    padding: 3rem 12rem;
-}
-
 
 footer {
     grid-row: 4/5;
     background-color: var(--ultradarkblue);
-    color: white;
+    padding: 1rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: .9rem;
 }
 
-footer p {
-    padding: 10px 20px ;
+footer div {
+    width: 30%;
+    line-height: 1.6rem;
 }
+
+footer div:nth-child(1) { text-align: left; }
+footer div:nth-child(2) { text-align: center; }
+footer div:nth-child(3) { text-align: right; }
