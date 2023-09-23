@@ -10,7 +10,8 @@
             $sql = 'SELECT * FROM navigation WHERE nav_state=1 ORDER BY nav_id ASC';
             $result = $db->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a><br>';
+                //echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a><br>';
+                echo '<a href="'.$row['nav_contentid'].'">'.$row['nav_title'].'</a><br>';
             }
             ?>
         </div>
@@ -22,7 +23,7 @@
         </div>
     </footer>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 </body>
 

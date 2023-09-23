@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^hir/([0-9]+)$ /index.php?component=news&id=$1 [QSA,L]
+RewriteRule ^([0-9]+)$ /index.php?component=content&id=$1 [QSA,L]
