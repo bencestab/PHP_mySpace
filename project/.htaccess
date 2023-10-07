@@ -1,3 +1,5 @@
+php_flag short_open_tag on
+
 Options +FollowSymLinks
 RewriteEngine On
 
