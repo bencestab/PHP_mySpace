@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Oct 07, 2023 at 09:11 AM
+-- Generation Time: Oct 07, 2023 at 09:22 AM
 -- Server version: 8.1.0
 -- PHP Version: 8.2.8
 
@@ -110,30 +110,6 @@ INSERT INTO `news` (`news_id`, `news_title`, `news_url`, `news_img`, `news_conte
 -- --------------------------------------------------------
 
 --
--- Table structure for table `persons`
---
-
-CREATE TABLE `persons` (
-  `id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `age` int NOT NULL,
-  `gender` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `persons`
---
-
-INSERT INTO `persons` (`id`, `name`, `age`, `gender`) VALUES
-(1, 'John Doe', 27, 'male'),
-(2, 'Jane Doe', 12, 'female'),
-(3, 'Daniel Doe', 34, 'male'),
-(4, 'Sarah Doe', 56, 'female'),
-(5, 'Kate Doe', 45, 'female');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -177,12 +153,6 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`news_id`);
 
 --
--- Indexes for table `persons`
---
-ALTER TABLE `persons`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -209,12 +179,6 @@ ALTER TABLE `navigation`
 --
 ALTER TABLE `news`
   MODIFY `news_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `persons`
---
-ALTER TABLE `persons`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
