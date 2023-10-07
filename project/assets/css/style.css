@@ -13,6 +13,7 @@
 
 :root {
     --midblue : #003A62 ;
+    --mid2blue : #013151 ;
     --darkblue : #0d213c ;
     --ultradarkblue : #061223 ;
     --lightblue : #0166aa;
@@ -150,18 +151,6 @@ main section {
     padding: 30px 10%;
 }
 
-main .triple-cards a {
-    display: block;
-    width: 27%;
-    background-color: var(--ultradarkblue);
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-main .triple-cards a:hover{
-    transform: scale(1.03);
-    box-shadow: 0 0 2rem  rgba(0, 0, 0, .5);
-}
 .triple-cards{
     background-color: var(--darkblue);
     display: flex;
@@ -169,6 +158,26 @@ main .triple-cards a:hover{
     justify-content: space-between;
 
 }
+
+main .triple-cards a {
+    display: block;
+    background-color: var(--ultradarkblue);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-bottom: 3rem;
+    width: 30%;
+}
+
+.small-card {
+    width: 23% !important;
+}
+
+main .triple-cards a:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 2rem  rgba(0, 0, 0, .5);
+}
+
+
 
 .section_midblue {
     background-color: var(--midblue);
@@ -206,31 +215,33 @@ h4 {
     font-weight: 300;
 }
 
-.single{
-    padding: 0;
+.single {
+    padding: 0 10% 0 0;
     display: grid;
-    grid-template-columns: 1fr 2fr ;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
+    background-color: var(--midblue);
+}
+
+.single:nth-child(even) {
+    background-color: var(--mid2blue);
 }
 
 .h-100 { height: 100%; }
 
 .single div{
-    background-color: var(--lightblue);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .single a {
- display: block;
- background-color: var(--midblue);
- padding: 3rem 5rem;
+    display: block;
+    padding: 3rem 5rem;
 }
 
 .single article {
-    background-color: var(--midblue);
-    padding: 3rem 5rem;
+    padding: 5rem;
 }
 
 .single .link {

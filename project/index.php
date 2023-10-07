@@ -22,6 +22,11 @@ if ($_GET['component']) {
         else include './components/error/error.php';
     }
 
+    // Listázó komponens
+    else {
+        include './components/contents/'. $_GET['component'] .'.php';
+    }
+
 // Ha nincs komponens, akkor főoldal
 } else include './components/contents/mainpage.php';
 

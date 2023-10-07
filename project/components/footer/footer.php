@@ -10,8 +10,15 @@
             $sql = 'SELECT * FROM navigation WHERE nav_state=1 ORDER BY nav_id ASC';
             $result = $db->query($sql);
             while ($row = $result->fetch_assoc()) {
-                //echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a><br>';
-                echo '<a href="'.$row['nav_contentid'].'">'.$row['nav_title'].'</a><br>';
+                foreach ($row as $key => $value) ${$key} = $value;
+                // Ha tartalom ID-re hivatkozunk:
+                if ($nav_contentid > 0) {
+                    echo '<a href="/tartalom/' . $nav_contentid . '">' . $nav_title . '</a><br>';
+                }
+                // Ha listázó komponeneshez kapcsoltunk:
+                else {
+                    echo '<a href="/' . $nav_component . '">' . $nav_title . '</a><br>';
+                }
             }
             ?>
         </div>
