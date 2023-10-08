@@ -53,6 +53,7 @@ nav section {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 nav section button {
@@ -155,6 +156,7 @@ main .triple-cards a {
     width: 27%;
     background-color: black;
     cursor: pointer;
+    margin-bottom:3rem;
 }
 
 main .triple-cards a:hover{
@@ -165,8 +167,7 @@ main .triple-cards a:hover{
     background-color: var(--darkblue);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    justify-content: space-around;
 }
 
 .section_midblue {
@@ -213,7 +214,7 @@ main .triple-cards a:hover{
 .single a {
  display: block;
  background-color: var(--midblue);
- padding: 3rem 5rem;
+ padding: 5rem 5rem;
 }
 
 .single article {

@@ -8,7 +8,10 @@
             // MYSQLI
             $result = $db->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a>';
+                if($row['nav_contentid']>0)
+                    echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a>';
+                else
+                    echo '<a href="index.php?component='.$row['nav_component'].'">'.$row['nav_title'].'</a>';
             }
 
 			// PDO

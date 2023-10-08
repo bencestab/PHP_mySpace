@@ -10,6 +10,8 @@ include './components/main/main_start.php';         // Content container open
 // Ha van komponens
 if ($_GET['component']) {
 
+    
+
     // Hír
     if ($_GET['component']=='news') {
         if ($_GET['id']) include './components/contents/news.php';
@@ -20,6 +22,16 @@ if ($_GET['component']) {
     if ($_GET['component']=='content') {
         if ($_GET['id']) include './components/contents/content.php';
         else include './components/error/error.php';
+    }
+
+    // USA Hírek
+    if ($_GET['component']=='usa_news') {
+        include './components/contents/american_news.php';
+    }
+
+    // Eu Hírek
+    if ($_GET['component']=='eu_news') {
+        include './components/contents/eu_news.php';
     }
 
 // Ha nincs komponens, akkor főoldal
