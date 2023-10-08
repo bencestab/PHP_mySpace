@@ -18,6 +18,4 @@
             <?php echo $row['cont_content']; ?>
             <br><br>
         </article>
-
-
 </section>
