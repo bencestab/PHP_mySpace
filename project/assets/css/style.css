@@ -13,8 +13,9 @@
 
 :root {
     --midblue : #003A62 ;
-    --darkblue : #06182f ;
-    --ultradarkblue : #010306 ;
+    --mid2blue : #013151 ;
+    --darkblue : #0d213c ;
+    --ultradarkblue : #061223 ;
     --lightblue : #0166aa;
 }
 
@@ -26,7 +27,7 @@ html,body {
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 250px 60px auto 150px;
+    grid-template-rows: 250px 60px 1fr 150px;
     background-color: #010306;
 }
 
@@ -150,17 +151,6 @@ main section {
     padding: 30px 10%;
 }
 
-main .triple-cards a {
-    display: block;
-    width: 27%;
-    background-color: black;
-    cursor: pointer;
-}
-
-main .triple-cards a:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 1rem black;
-}
 .triple-cards{
     background-color: var(--darkblue);
     display: flex;
@@ -168,6 +158,26 @@ main .triple-cards a:hover{
     justify-content: space-between;
 
 }
+
+main .triple-cards a {
+    display: block;
+    background-color: var(--ultradarkblue);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-bottom: 3rem;
+    width: 30%;
+}
+
+.small-card {
+    width: 23% !important;
+}
+
+main .triple-cards a:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 2rem  rgba(0, 0, 0, .5);
+}
+
+
 
 .section_midblue {
     background-color: var(--midblue);
@@ -189,36 +199,49 @@ main .triple-cards a:hover{
 .card-text{
     padding: 2rem;
     font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: rgba(255, 255, 255, .9);
 }
 
-.card-text h2 {
-    padding-bottom: 0.5rem;
+h2 {
+    padding-bottom: .75rem;
     font-size: 1.25rem ;
+    color: #c1c0e3;
 }
 
-.single{
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 2fr ;
-    grid-template-rows: auto;
+h4 {
+    padding-bottom: .75rem;
+    font-size: .8rem ;
+    font-weight: 300;
 }
+
+.single {
+    padding: 0 10% 0 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    background-color: var(--midblue);
+}
+
+.single:nth-child(even) {
+    background-color: var(--mid2blue);
+}
+
+.h-100 { height: 100%; }
 
 .single div{
-    background-color: var(--lightblue);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .single a {
- display: block;
- background-color: var(--midblue);
- padding: 3rem 5rem;
+    display: block;
+    padding: 3rem 5rem;
 }
 
 .single article {
-    background-color: var(--midblue);
-    padding: 3rem 5rem;
+    padding: 5rem;
 }
 
 .single .link {
@@ -240,10 +263,9 @@ footer {
 }
 
 footer div {
-    width: 30%;
     line-height: 1.6rem;
 }
 
-footer div:nth-child(1) { text-align: left; }
-footer div:nth-child(2) { text-align: center; }
-footer div:nth-child(3) { text-align: right; }
+footer div:nth-child(1) { text-align: left; width: 38%; }
+footer div:nth-child(2) { text-align: center; width: 24%; }
+footer div:nth-child(3) { text-align: right; width: 38%; }

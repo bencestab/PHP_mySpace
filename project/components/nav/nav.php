@@ -1,32 +1,33 @@
 <nav>
         <mark></mark>
         <section>
+            <a href="/">Főoldal</a>
             <?php
-
             $sql = 'SELECT * FROM navigation WHERE nav_state=1 ORDER BY nav_id ASC';
-
-            // MYSQLI
             $result = $db->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo '<a href="index.php?component=content&id='.$row['nav_contentid'].'">'.$row['nav_title'].'</a>';
-            }
 
-			// PDO
-            /*
-			$result2 = $db2->query($sql);
-			while ($row2 = $result2->fetch()) {
-                echo '<a href="/">'.$row2['nav_title'].'</a>';
+                // Az asszociatív tömb kulcsaiból változókat generálunk
+                foreach ($row as $key => $value) ${$key} = $value;
+            
+                /*
+                A .htaccess fájlban leírt URL átírási szabályoknak köszönhetően a navigációs elemek href értékeit szebbé varázsolhatjuk.
+                - eredeti url: index.php?component=content&id=1
+                - átírt url: tartalom/1
+                Amennyiben nem contentId-t kapcsoltunk a menüponthoz, hanem komponenst nevet, az átírási szabály így alakul:
+                - eredeti url: index.php?component=comp-name
+                - átírt url: comp-name
+                */
+
+                // Ha tartalom ID-re hivatkozunk:
+                if ($nav_contentid > 0) {
+                    echo '<a href="/tartalom/' . $nav_contentid . '">' . $nav_title . '</a>';
+                }
+                // Ha listázó komponeneshez kapcsoltunk:
+                else {
+                    echo '<a href="/' . $nav_component . '">' . $nav_title . '</a>';
+                }
             }
-            */
             ?>
-
-
-            <!-- STATIC HTML NAV TEMPLATE
-                a href="/">Home</a>
-                <a href="">About</a>
-                <a href="">Info</a>
-                <a href="">Contact</a>
-                <button>X</button>
-            -->
         </section>
 </nav>

@@ -1,0 +1,8 @@
+php_flag short_open_tag on
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9\-]+)$ /index.php?component=$1  [QSA,L]
+RewriteRule ^hir/([0-9]+)$ /index.php?component=news&id=$1 [QSA,L]
+RewriteRule ^tartalom/([0-9]+)$ /index.php?component=content&id=$1 [QSA,L]
