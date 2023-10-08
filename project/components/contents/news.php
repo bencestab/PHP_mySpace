@@ -16,8 +16,6 @@
                         szerző: <?php echo $row['user_realname']; ?>
                     </h4>
                     <?php echo $row['news_content']; ?>
-                    <br><br>
-                    <a href="index.php" class="link">< vissza a főoldalra</a>
                 </article>
 
         </section>

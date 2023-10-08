@@ -10,7 +10,10 @@ include './components/main/main_start.php';         // Content container open
 // Ha van komponens
 if ($_GET['component']) {
 
-    
+    // Főoldal
+    if ($_GET['component']=='mainpage') {
+        include './components/contents/mainpage.php';
+    }
 
     // Hír
     if ($_GET['component']=='news') {

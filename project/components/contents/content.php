@@ -7,7 +7,9 @@
         $result = $db->query($sql);
         $row = $result->fetch_assoc();
         ?>
-        <div style="background-image: url('./assets/img/content.jpg');"></div>
+        
+        <div style="background-image: url(<?php echo rand(0, 1) === 0 ? './assets/img/content.jpg' : './assets/img/header_astronaut.jpg'; ?>);"></div>
+
         <article>
             <h2>
                 <?php echo $row['cont_title']; ?>
@@ -15,7 +17,6 @@
             <br><br>
             <?php echo $row['cont_content']; ?>
             <br><br>
-            <a href="index.php" class="link">< vissza a főoldalra</a>
         </article>
 
 
